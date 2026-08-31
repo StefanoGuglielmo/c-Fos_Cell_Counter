@@ -110,9 +110,9 @@ The general workflow is:
 
 ### 1. Configure the analysis
 
-After opening the application, select the input folder containing the images to be analyzed and the output folder where the results will be saved.
+After opening the application, select the input folder containing the images to be analyzed and the output folder where the results will be saved (red square).
 
-The input images must be TIFF files, containing one channel and one Z-plane (red square).
+The input images must be TIFF files, containing one channel and one Z-plane.
 
 The user can also modify the classification settings, including the number of calibration cells and the parameters used for c-Fos classification (blue square).
 
