@@ -106,28 +106,45 @@ The general workflow is:
 6. Generate an overlay for visual inspection.
 7. Save the analysis results.
 
-## Project structure
+## Usage
 
-```text
-cFos_Counter/
-│
-├── model/
-│   └── 2D_versatile_fluo/
-│
-├── example/
-│   ├── input/
-│   └── output/
-│
-├── app.py
-├── analysis.py
-├── calibration.py
-├── overlay.py
-├── worker.py
-├── environment.yml
-├── README.md
-├── LICENSE
-└── .gitignore
-```
+### 1. Configure the analysis
+
+After opening the application, select the input folder containing the images to be analyzed and the output folder where the results will be saved.
+
+The input images must be TIFF files, containing one channel and one Z-plane (red square).
+
+The user can also modify the classification settings, including the number of calibration cells and the parameters used for c-Fos classification (blue square).
+
+<img src="example/screenshots/app.png" width="1000">
+
+### 2. Manual c-Fos calibration
+
+Select representative c-Fos-positive cells to calibrate the analysis. For each calibration cell, left-click on one edge of the cell and then left-click on the opposite edge to define its diameter.
+
+The application measures the fluorescence intensity and size of the selected cells and uses these measurements to determine the classification thresholds.
+
+<img src="example/screenshots/calibration.png" width="1000">
+
+### 3. Analyze and inspect the results
+
+After calibration, the application automatically detects cells using StarDist and classifies them as c-Fos-positive or c-Fos-negative based on the calibration parameters.
+
+The detected cells and their classification are displayed as an overlay on the original fluorescence image, allowing the results to be visually inspected directly in the application.
+
+<img src="example/screenshots/app_results.png" width="1000">
+
+### 4. Export the image results
+
+The application exports the analysis results as image files, including an overlay of the entire image and a mask containing the detected c-Fos-positive cells.
+
+<img src="example/screenshots/exported_overlay.png" width="1000">
+
+### 5. Export the results
+
+The application exports the analysis results as a CSV file, containing the measurements and classification results for the detected cells.
+
+<img src="example/screenshots/results_csv.png" width="1000">
 
 ## Reproducibility
 
