@@ -141,8 +141,8 @@ Cells larger than this threshold cannot be classified as c-Fos-positive. Lower v
 
 The application provides two calibration modes:
 
-- **Use the same calibration for all images** — the first image is manually calibrated, and the resulting reference diameter and intensity are applied to all images. This is recommended when images were acquired under comparable imaging conditions.
-- **Calibrate each image independently** — each image is manually calibrated separately. This can be useful when images differ in fluorescence intensity or cell size.
+- **Use the same calibration for all images** - the first image is manually calibrated, and the resulting reference diameter and intensity are applied to all images. This is recommended when images were acquired under comparable imaging conditions.
+- **Calibrate each image independently** - each image is manually calibrated separately. This can be useful when images differ in fluorescence intensity or cell size.
 
 ### 2. Manual c-Fos calibration
 
